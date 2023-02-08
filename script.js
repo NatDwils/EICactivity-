@@ -33,3 +33,18 @@
         }
 
     }
+
+    function calculateRuns(){
+        let input=document.getElementById("score").value;
+        let results=document.getElementById("results");
+        let totalscore=0;
+        let score=input.split(",");
+        for(let i=0;i<score.length;i++){
+            if(i==4){
+                totalscore+=(i+2)*score[i];
+            }else{
+            totalscore+=(i+1)*score[i];
+            }
+        }
+        results.innerHTML = totalscore + "runs";
+    }
